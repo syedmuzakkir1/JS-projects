@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+ 
+    <header>
+
+        <nav>
+            <h2>Logo</h2>
+           
+            <div class="nav_item">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+
+                <a href="#">Services</a>
+
+                <a href="#">Feedback</a>
+                <a href="#">Contact Us</a>
+             
+            </div>
+            <button id="menu_btn" ><img src="icons8-menu.svg" alt="">
+            </button>
+            <button class="cross_btn"><img src="icons8-no.svg" alt=""></button>
+
+        </nav>
+    </header>
+
+ 
+    <script>
+     let  navitem =  document.querySelector(".nav_item")
+      let    btn = document.querySelector("#menu_btn")
+      let    corss_btn = document.querySelector(".cross_btn")
+                
+     btn.addEventListener('click', buttonclick)
+
+      
+    function buttonclick(){
+
+        // if(navitem.style.display=='none'){
+        //     navitem.style.display='block'
+        //     btn.style.display='none'
+        //     corss_btn.style.display='block'
+        // }
+        // else{
+        //     btn.style.display='none'
+        //     navitem.style.display='block'
+
+        //     corss_btn.style.display='block'
+        // }
+        
+            navitem.style.display='block'
+            btn.style.display='none'
+            corss_btn.style.display='block'
+
+       
+
+
+
+    }
+
+
+    corss_btn.addEventListener('click', crossbuttonClick);
+
+    function crossbuttonClick(){
+
+        // if(corss_btn.style.display=='block'){
+            // corss_btn.style.display='none'
+        //     btn.style.display= 'block'
+        //     navitem.style.display='none'
+        // }
+        // else{
+            // navitem.style.display='block'
+            // corss_btn.style.display='none'
+        // }
+
+        corss_btn.style.display='none'
+            btn.style.display= 'block'
+            navitem.style.display='none'
+
+
+
+   
+
+    }
+     
+    </script>
+</body>
+</html>

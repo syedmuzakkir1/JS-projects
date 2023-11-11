@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toggle</title>
+</head>
+<body>
+
+    <style>
+       
+       body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: aliceblue;
+       }
+       
+        .btn{
+            /* padding-right: 4rem; */
+           width: 150px;
+           height: 50px;
+           position: relative;
+           background-color: rgba(95, 95, 101, 0.538);
+           padding: .5rem;
+           border-radius: 1.9rem;
+        }
+        .toggle{
+            position: absolute;
+            display: flex;
+            width: 50px;
+            height: 50px;
+            background-color: rgb(15, 11, 11);
+            align-self: flex-start;
+            /* margin: 1rem; */
+            border-radius: 1.5rem;
+            transition: 1.5s;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            cursor: pointer;
+            font-weight: bold;
+            letter-spacing: 1px;
+            /* right: .5rem; */
+        }
+
+       .toggle.right{
+               right: .5rem;
+               /* left: .5rem; */
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               transition: 1.5s;
+               background-color: rgb(235, 226, 226);
+               cursor: pointer;
+               color: black;
+        }
+        .body_black{
+          
+          background-color: black;
+          color: white;
+        }
+
+        .paras{
+            margin: 1rem;
+            
+            padding: 1rem;
+           font-size: 1.1rem;
+
+        }
+        .flex{
+
+            display: grid;
+            grid-template-areas: 'one two '
+             ;
+             /* background-color: azure; */
+             line-height: 1.5;
+             padding: 1rem 5rem;
+        }
+
+    
+    </style>
+
+
+    <div class="btn"><div class="toggle">ON</div></div>
+    
+    <div class="flex">
+    
+    <div class="paras">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dicta explicabo maxime eos vero. Excepturi, voluptatibus. Eos error ipsum, odio sed eius nemo eum repellat cum rem, quasi, ad porro quas ea et? Adipisci nam excepturi neque laboriosam in impedit porro deserunt nisi voluptates recusandae possimus, amet maxime mollitia. Magni sequi, beatae ullam quis illo cupiditate maxime explicabo voluptatibus. Facilis, expedita modi quis vel ab fugit dolore minima ex quia nemo repudiandae voluptates officia est, id, quaerat dolor praesentium sed maxime pariatur. Laborum, laboriosam illum dolore exercitationem expedita suscipit repudiandae nam quod animi libero adipisci error, at rerum a nobis.</p>
+    </div>
+
+    <div class="paras">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dicta explicabo maxime eos vero. Excepturi, voluptatibus. Eos error ipsum, odio sed eius nemo eum repellat cum rem, quasi, ad porro quas ea et? Adipisci nam excepturi neque laboriosam in impedit porro deserunt nisi voluptates recusandae possimus, amet maxime mollitia. Magni sequi, beatae ullam quis illo cupiditate maxime explicabo voluptatibus. Facilis, expedita modi quis vel ab fugit dolore minima ex quia nemo repudiandae voluptates officia est, id, quaerat dolor praesentium sed maxime pariatur. Laborum, laboriosam illum dolore exercitationem expedita suscipit repudiandae nam quod animi libero adipisci error, at rerum a nobis.</p>
+    </div>
+
+    <div class="paras">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dicta explicabo maxime eos vero. Excepturi, voluptatibus. Eos error ipsum, odio sed eius nemo eum repellat cum rem, quasi, ad porro quas ea et? Adipisci nam excepturi neque laboriosam in impedit porro deserunt nisi voluptates recusandae possimus, amet maxime mollitia. Magni sequi, beatae ullam quis illo cupiditate maxime explicabo voluptatibus. Facilis, expedita modi quis vel ab fugit dolore minima ex quia nemo repudiandae voluptates officia est, id, quaerat dolor praesentium sed maxime pariatur. Laborum, laboriosam illum dolore exercitationem expedita suscipit repudiandae nam quod animi libero adipisci error, at rerum a nobis.</p>
+    </div>
+</div>
+    <script>
+
+        let toggle= document.querySelector('.toggle')
+
+        toggle.addEventListener('click', change)
+
+        function change(){
+            document.body.classList.toggle('body_black')
+            toggle.classList.toggle('right')
+            
+            if(toggle.innerHTML=='ON'){
+                toggle.innerHTML='OFF'
+            }
+            else{
+                toggle.innerHTML='ON'
+            }
+            
+        }
+
+    
+             
+
+        
+    </script>
+</body>
+</html>

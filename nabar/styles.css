@@ -1,0 +1,50 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: azure;
+    padding: .5rem 3rem;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a{
+     text-decoration: none;
+     padding: .5rem .9rem;
+     
+}
+.cross_btn{
+    display: none;
+}
+#menu_btn{
+    display: none;
+}
+
+
+@media (max-width:768px){
+     
+    .nav_item{
+        display: none ;
+        position: absolute;
+        top: 20%;
+        left: 10%;
+
+
+    }
+    
+    #menu_btn{
+        display: block ;
+    }
+
+   
+  
+
+    
+
+}

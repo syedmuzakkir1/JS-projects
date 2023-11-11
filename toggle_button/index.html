@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toggle</title>
+</head>
+<body >
+    
+    <!-- <input type="checkbox"> -->
+  <style>
+
+    /* input:checked body{
+        background-color: black;
+    } */
+ .active{
+    background-color: black;
+ }
+    /* body:active{
+        background-color: black;
+    } */
+
+    body{
+        width: 100%;
+      
+        text-align: center;
+    }
+    
+  </style>
+  <button>click</button>
+ 
+  <script>
+ 
+ let button = document.querySelectorAll('button')[0]
+
+ button.addEventListener('click' ,change)
+
+ function change(){
+ 
+   let body = document.querySelector('body')
+// //    console.log(body)
+//     // body.classList = 'active'
+    body.classList.toggle('active')
+
+ }
+ 
+//  console.log(button)
+  </script>
+</body>
+</html>

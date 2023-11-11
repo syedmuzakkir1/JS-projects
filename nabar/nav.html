@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+</head>
+
+<style>
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+    header{
+        background-color: rgba(108, 165, 236, 0.27);
+        padding: 2rem 3rem;
+    }
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navitems a{
+        text-decoration: none;
+        padding: .7rem 1rem;
+        color: rgb(5, 25, 74);
+        font-size: 1.2rem;
+        font-weight: 530;
+        background-color: rgba(108, 166, 236, 0.208);
+        border-radius: 1rem;
+        margin: .5rem;
+        
+    }
+    .btn{
+        display: none;
+    }
+
+    a:hover{
+
+background-color: rgba(59, 91, 137, 0.493);
+
+
+}
+.cross{
+    display: none;
+}
+
+    @media (max-width:768px){
+        nav{
+            display: flex;
+        }
+      body{
+        position: relative;
+      }
+        .navitems{
+            display: none;
+        }
+        .btn{
+            display: block;
+            font-size: 1.9rem;
+            padding: .1rem .6rem;
+        }
+        .display{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+             right: 0;
+             background-color: antiquewhite;
+             padding: 1rem 2rem;
+             text-align: center;
+             transition: 2s;
+        }
+        .display a:hover{
+            background-color: aliceblue;
+            /* font-size: 1.1rem; */
+        }
+
+        .crossBlock{
+            display: block;
+            font-size: 1.9rem;
+            padding: .3rem 1rem;
+
+            color: black;
+            border: 1px solid rgb(18, 18, 50);
+        }
+        
+    
+    }
+
+
+</style>
+
+<body>
+
+     <header>
+
+    <nav>
+       <h2>Logo</h2>
+         
+       <div class="navitems">
+        <a href="#">Home</a>
+        <a href="#">Features</a>
+        <a href="#">Feedback</a>
+        <a href="#">About</a>
+        <a href="https://graphemica.com/%E2%98%B0#info">Contact</a>
+
+       </div>
+    <button class="btn" >&#9776; </button>
+    <a href="" class="cross ">
+        &times;
+       </a>
+
+    </nav> 
+
+
+</header>
+
+<script>
+
+    let btn = document.querySelector('.btn')
+ 
+    let cross = document.querySelector('.cross')
+    
+    btn.addEventListener('click',navbar)
+
+
+    function navbar(){
+     
+
+let navItems = document.querySelector('.navitems');
+
+navItems.classList.toggle('display')
+
+btn.style.opacity='0';
+cross.classList.toggle('crossBlock')
+
+// navItems.classList.toggle('')
+
+
+        
+
+    }
+
+</script>
+</body>
+</html>
